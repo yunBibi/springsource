@@ -1,0 +1,6 @@
+package com.company.domain;
+
+public class UserDTO {
+	private String userid;
+	private String password;
+}

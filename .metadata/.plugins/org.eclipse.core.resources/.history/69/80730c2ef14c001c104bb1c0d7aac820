@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.MemberMapper">
+	<!--  전체 조회 : list -->
+	<select id="list" resultType="com.company.domain.MemberDTO">
+		select * from member
+	</select>
+	
+	<!-- 특정 멤버 조회 : read(userid, password 일치) -->
+	<select id="read">
+		select * from member where userid=#{userid} and password=#{password}
+	</select>
+	
+	<!-- 특정 멤버 정보 수정 : update(userid, password 일치하면 새로운 비밀번호로 변경) -->
+	<update id="update">
+		update member 
+		set password=#{confirm_password} 
+		where userid=#{userid} and password=#{password}
+	</update>
+</mapper>

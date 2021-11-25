@@ -1,0 +1,11 @@
+package com.company.service;
+
+public class SampleServiceImpl implements SampleService {
+
+	@Override
+	public void addData(String data) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=member_mybatis/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.company.service{MemberService.java[MemberService" modifiers="513" timestamp="1637737369784"/>
+    <typeInfo handle="=aop_factorial/C:\/Program Files\/Java\/jdk-11.0.10\/lib\/jrt-fs.jar`jdk.internal.vm.compiler=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;org.graalvm.compiler.core.common(FieldsScanner$CalcOffset.class[CalcOffset" modifiers="1545" timestamp="1637629692083"/>
+    <typeInfo handle="=transaction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.company.service{SampleService.java[SampleService" modifiers="513" timestamp="1637804566616"/>
+    <typeInfo handle="=transaction/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.company.mapper{SampleMapper.java[SampleMapper" modifiers="513" timestamp="1637804490685"/>
+</typeInfoHistroy>

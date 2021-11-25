@@ -1,0 +1,9 @@
+package com.company.app;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class TimeAspect {
+	public Object measure(ProceedingJoinPoint pjp) {
+		
+	}
+}
