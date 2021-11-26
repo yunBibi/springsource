@@ -3,8 +3,11 @@ package com.company.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.company.domain.UserDTO;
 
@@ -32,7 +35,7 @@ public class SampleController {
 //  //String 타입일 경우 login만을 가지고 servlet view resolver로 간다. -> 앞뒤로 /WEB-INF/views 와 .jsp를 붙인다.
 //	}
 	
-	// GET 방식 응답
+//	// GET 방식 응답
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login() {
 		log.info("/basic 요청.........");
@@ -63,28 +66,32 @@ public class SampleController {
 //	}
 	
 	
-	// 바인딩 변수
-	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String loginPost(String userid, String password) {
-		log.info("/login Post 요청");
-		
-		log.info("userid : "+userid);
-		log.info("password : "+password);
-		
-		return "/sample/basic";
-	}
-	
-	
-//	// 바인딩 객체
+//	// 바인딩 변수
 //	@RequestMapping(value="/login", method=RequestMethod.POST)
-//	public String loginPost(UserDTO userdto) {
+//	public String loginPost(String userid,@RequestParam("pwd") String password, Model model) {
 //		log.info("/login Post 요청");
 //		
-//		log.info("userid : "+userdto.getUserid());
-//		log.info("password : "+userdto.getPassword());
+//		log.info("userid : "+userid);
+//		log.info("password : "+password);
+//		
+//		model.addAttribute("userid", userid);
+//		model.addAttribute("password", password);   // request.setAttribute
 //		
 //		return "/sample/basic";
 //	}
+//	
+	
+//	// 바인딩 객체
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String loginPost(@ModelAttribute("login") UserDTO userDto) {
+		log.info("/login Post 요청");
+		
+		log.info("userid : "+userDto.getUserid());
+    	log.info("password : "+userDto.getPassword());
+    	log.info("name : " + userDto.getName());
+		
+		return "/sample/basic";
+	}
 
 	@RequestMapping(value="/info", method=RequestMethod.GET)
 	public void method1() {
