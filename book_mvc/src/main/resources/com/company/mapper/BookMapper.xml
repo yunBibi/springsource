@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.BookMapper">
+	<!-- 전체 도서 조회 -->
+	<select id="list" resultType="com.company.domain.BookDTO">
+		select * from bookTBL
+	</select>
+	
+	<select id="read" resultType="com.company.domain.BookDTO">
+		select * from bookTBL where code=#{code}
+	</select>
+	
+	<!-- 새 도서 입력 -->
+	<insert id="insert">
+		insert into bookTBL(code,title,writer,price)
+		values(#{code}, #{title}, #{writer}, #{price})
+	</insert>
+</mapper>
