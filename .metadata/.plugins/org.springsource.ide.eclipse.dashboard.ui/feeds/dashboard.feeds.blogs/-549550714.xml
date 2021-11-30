@@ -5,7 +5,24 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-11-29T13:49:03Z</updated>
+  <updated>2021-11-29T17:11:25Z</updated>
+  <entry>
+    <title>Security Report for Spring AMQP (Spring for RabbitMQ)</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/11/29/security-report-for-spring-amqp-spring-for-rabbitmq" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2021-11-29:4624</id>
+    <updated>2021-11-29T17:11:25Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;The recently released versions of Spring AMQP (2.4.0, 2.3.12, 2.2.20) contain a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2021-22095"&gt;CVE-2021-22095&lt;/a&gt;, which can cause a potential &lt;code&gt;OutOfMemoryError&lt;/code&gt; for very large messages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Boot version 2.6.0 and 2.5.7 will bring in the 2.4.0 and 2.3.12 versions of spring-amqp respectively. Users of Boot 2.4.x should override the &lt;code&gt;spring-amqp&lt;/code&gt; and &lt;code&gt;spring-rabbit&lt;/code&gt; versions to 2.3.12; users of Spring Boot 2.3.x should override the versions to 2.2.20.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.6.1 is now available</title>
     <link rel="alternate" href="https://spring.io/blog/2021/11/29/spring-boot-2-6-1-is-now-available" />
@@ -818,19 +835,6 @@ We&amp;#8217;re currently working with Sonatype to investigate options to potent
   &lt;li&gt;Spring Data Couchbase 4.1.15 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/4.1.15"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.1.15/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/couchbase/docs/4.1.15/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-couchbase/releases/tag/4.1.15"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data for Apache Solr 4.3.15 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-solr/4.3.15"&gt;Artifacts&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.3.15/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="https://docs.spring.io/spring-data/solr/docs/4.3.15/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="https://github.com/spring-projects/spring-data-solr/releases/tag/4.3.15"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/11/11/a-bootiful-podcast-jms-and-messaging-legend-hornetq-and-artemis-cofounder-clebert-suconic" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-11-11:4601</id>
-    <updated>2021-11-11T20:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Apache Artemis and messaging legend &lt;a href="https://twitter.com/clebertsuconic"&gt;Clebert Suconic (@clebertsuconic)&lt;/a&gt;. Check out ArtemisCloud.io for easy Kubernetes deployments of Apache Artemis.&lt;/p&gt;
-&lt;iframe title="JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=3xay8-112bfd0-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

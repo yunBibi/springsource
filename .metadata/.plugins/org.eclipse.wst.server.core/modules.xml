@@ -2,5 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:member_mvc" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:book_mvc" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:board_mvc" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:webmvc" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

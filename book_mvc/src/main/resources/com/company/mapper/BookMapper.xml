@@ -15,4 +15,17 @@
 		insert into bookTBL(code,title,writer,price)
 		values(#{code}, #{title}, #{writer}, #{price})
 	</insert>
+	
+	<!-- 도서 정보 삭제 -->
+	<delete id="delete">
+		delete from bookTBL 
+		where code=#{code}
+	</delete>
+	
+	<!-- 도서 수정 -->
+	<update id="update">
+		update bookTBL
+		set price=#{price}
+		where code=#{code}
+	</update>
 </mapper>
