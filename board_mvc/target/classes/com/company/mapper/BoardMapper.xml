@@ -14,10 +14,28 @@
 	</insert>
 	
 	
-	<!-- 전체 목록 -->
-	<select id="listAll" resultType="com.company.domain.BoardDTO">
+	<!-- 전체 목록 : 페이지 나누기 전 -->
+	<!-- <select id="listAll" resultType="com.company.domain.BoardDTO">
 		select bno,title,writer,regdate,updatedate from spring_board
 		where bno>0 order by bno desc, regdate desc
+	</select> -->
+	
+	<select id="listAll" resultType="com.company.domain.BoardDTO">
+		<![CDATA[
+		
+		select bno,title,writer,regdate,updatedate
+		from (select /*+INDEX_DESC(spring_board pk_spring_board)*/ rownum rn,bno,title,writer,regdate,updatedate
+	  		  from spring_board
+     		  where rownum <= (#{pageNum} * #{amount}))
+		where rn > (#{pageNum}-1) * #{amount}
+		]]>	
+	</select>
+	
+	<!-- 전체 게시물 수 -->
+	<select id="totalCnt" resultType="int">
+		select count(*)
+		from spring_board
+		where bno > 0
 	</select>
 
 	<!--  게시글 하나 가져오기 -->

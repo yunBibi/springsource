@@ -28,7 +28,7 @@
                 				</div>  
                 				<div class="form-group">
                 					<label>Content</label>
-                					<textarea class="form-control" rows="3" name="content">{dto.content}</textarea>               				
+                					<textarea class="form-control" rows="3" name="content">${dto.content}</textarea>               				
                 				</div> 
                 				<div class="form-group">
                 					<label>Writer</label>
@@ -44,6 +44,8 @@
             </div>
 <%-- remove와 list를 위한 폼--%>
 <form action="" id="actionForm">
+	<input type="hidden" name="pageNum" value="${cri.pageNum}" />
+	<input type="hidden" name="amount" value="${cri.amount}" />
 	<input type="hidden" name="bno" value="${dto.bno}" />
 </form>   			
 <%-- 스크립트 --%>
