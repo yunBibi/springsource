@@ -11,5 +11,5 @@ public interface BoardService {
 	public BoardDTO getRow(int bno);
 	public boolean update(BoardDTO updateDto);
 	public boolean remove(int bno);
-	public int getTotalCount();
+	public int getTotalCount(Criteria cri);
 }

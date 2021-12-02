@@ -51,13 +51,15 @@ $(function(){
 		
 		// 가져온 값을 actionForm의 amount값 수정하기
 		actionForm.find("input[name='amount']").val(amount);
+		// bno 제거
+		actoinForm.find("input[name='bno']").remove();
 		
 		// actionForm 보내기
 		actionForm.submit();
 	})
 	
-		// 글 제목 클릭 시 
-		$(".move").click(function(e){
+	// 글 제목 클릭 시 
+	$(".move").click(function(e){
 		// a태그 속성 중지
 		e.preventDefault();
 		

@@ -51,7 +51,7 @@ public class BoardController {
 		List<BoardDTO> list = service.getList(cri);
 		
 		// 페이지 나누기를 위한 정보 얻기   - 전체 게시물 수가 중요
-		int totalCnt = service.getTotalCount();
+		int totalCnt = service.getTotalCount(cri);
 		
 		model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
 		model.addAttribute("list", list);
@@ -78,6 +78,10 @@ public class BoardController {
 		rttr.addAttribute("amount", cri.getAmount());
 		// 보던 데로 돌아가게 해주는 코드
 		
+		// 검새 값
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
+		
 		rttr.addFlashAttribute("result","success");
 		return "redirect:/board/list";
 	}
@@ -92,6 +96,9 @@ public class BoardController {
 		// 페이지 나누기 값
 		rttr.addAttribute("pageNum", cri.getPageNum());   // Parameter 형태로 주소줄에 따라감
 		rttr.addAttribute("amount", cri.getAmount());
+		// 검새 값
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
 		
 		rttr.addFlashAttribute("result","success");    // 주소줄에 따라가지 않음
 		return "redirect:/board/list";
