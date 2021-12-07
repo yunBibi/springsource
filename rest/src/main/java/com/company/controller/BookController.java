@@ -52,13 +52,8 @@ public class BookController {
 	
 	
 	@GetMapping("/list")
-	public void list(Model model) {
+	public void list() {
 		log.info("전체 리스트 요청");
-		List<BookDTO> list = service.getList();
-		
-		log.info(""+list);	
-		model.addAttribute("list",list);     // ==request.setAttribute()
-		
 		//  /book/list  => jsp 찾는데 사용됨
 	}
 	

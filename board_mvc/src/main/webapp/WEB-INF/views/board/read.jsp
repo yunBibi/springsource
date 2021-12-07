@@ -32,7 +32,7 @@
                 				</div> 
                 				<div class="form-group">
                 					<label>Writer</label>
-                					<input class="form-control" name="writer" readonly="readonly" value="${dto.writer}">               				
+                					<input class="form-control" name="writer" readonly="readonly" value="${dto.writer}">                				
                 				</div>  
                 				<button type="button" class="btn btn-default">Modify</button>     			
                 				<button type="reset" class="btn btn-info">List</button>          			
@@ -40,14 +40,40 @@
                 		</div>
                 	</div>
                 </div>
-            </div>   
-<%-- 페이지 나누기를 위한 폼 --%> 
+            </div> 
+
+<%-- 페이지 나누기를 위한 폼 --%>
 <form action="" id="actionForm">
 	<input type="hidden" name="pageNum" value="${cri.pageNum}" />
 	<input type="hidden" name="amount" value="${cri.amount}" />
-	<input type="hidden" name="type" value="${cri.type}" />
-	<input type="hidden" name="keyword" value="${cri.keyword}" />
+	<input type="hidden" name="type" value="${cri.type}"/>
+	<input type="hidden" name="keyword" value="${cri.keyword}"/>
 	<input type="hidden" name="bno" value="${dto.bno}" />
-</form>   
-<script src="/resources/js/read.js"></script>                
-<%@include file="../includes/footer.jsp" %>       
+</form>    
+<script>
+	//현재 글 번호 가져오기
+	let bno = ${dto.bno};
+</script>
+<script src="/resources/js/reply.js"></script>      
+<script src="/resources/js/read.js"></script>      
+<%@include file="../includes/footer.jsp" %>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     

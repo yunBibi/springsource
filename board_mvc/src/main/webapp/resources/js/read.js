@@ -1,27 +1,46 @@
 /**
- * read.jsp 연관된 스크립트
+ * read.jsp 스크립트
  */
 $(function(){
 	
-	let form = $("#actionForm");
+	let form = $("#actionForm");	
 	
-	// list 클릭 -> 전체 리스트 보여주기
+	//List 를 클릭하면 전체 리스트 보여주기
 	$(".btn-info").click(function(){
-		// actionForm에서 bno 제거
+		//actionForm 에서 bno 제거
 		form.find("input[name='bno']").remove();
 		
-		// actionForm action은 수정 /board/list
-		form.attr("action", "/board/list");
+		//actionForm action 수정 /board/list
+		form.attr("action","/board/list");
 		
-		// actionForm 전송
+		//actionForm 전송
 		form.submit();
-		
 	})
 	
-	// modify 클릭 -> actionForm 보내기
-	// /board/modify + get
+	//Modify를 클릭하면 actionForm 보내기
+	// /board/modify + GET
 	$(".btn-default").click(function(){
-		form.attr("action", "/board/modify");
+		form.attr("action","/board/modify");
 		form.submit();
 	})
+	
+	
+	//댓글 작업
+	
+	//댓글 삽입 - 
+	replyService.add(
+		{bno:bno,replyer:'test',reply:'댓글 작성중...'},
+				function(result){
+					if(result){
+						alert(result);
+					}
+		
+	});//add end
+	
+	
+	
 })
+
+
+
+

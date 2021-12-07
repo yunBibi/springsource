@@ -25,43 +25,47 @@ import lombok.extern.log4j.Log4j2;
  */
 @Controller
 @Log4j2
-public class HomeController {	
-
-	@ResponseBody
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
-		log.info("index 요청");
+public class HomeController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	
+	@GetMapping("/")
+	public String index() {
 		return "index";
 	}
 	
+	
+	
 	@ResponseBody
-	@GetMapping(value="/sample2", produces= {MediaType.APPLICATION_JSON_VALUE})
+	@GetMapping(value="/sample2",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public SampleDTO sampleJson() {
-		log.info("Sample2");
+		log.info("sample2");
 		
 		SampleDTO sample = new SampleDTO();
 		sample.setFirstName("hong");
 		sample.setLastName("dong");
 		
 		return sample;
-	}
+	}	
 	
-	@ResponseBody     // 야, 이거 데이터야~ jsp 아니야
-	@GetMapping(value="/list2", produces= {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	@GetMapping(value="/list2",produces = {MediaType.APPLICATION_JSON_VALUE})
 	public List<SampleDTO> sampleJsonList() {
-		log.info("Sample");
+		log.info("sample");
 		
 		List<SampleDTO> list = new ArrayList<SampleDTO>();
 		
 		for(int i=0;i<10;i++) {
-
-		SampleDTO sample = new SampleDTO();
-		sample.setMno(i+"");
-		sample.setFirstName("hong");
-		sample.setLastName("dong");
-		list.add(sample);
-		}
+			SampleDTO sample = new SampleDTO();
+			sample.setMno(i+"");
+			sample.setFirstName("hong");
+			sample.setLastName("dong");
+			list.add(sample);			
+		}		
 		return list;
 	}
 	
+	
 }
+
