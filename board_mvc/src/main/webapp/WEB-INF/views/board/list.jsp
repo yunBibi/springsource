@@ -32,7 +32,7 @@
 									<c:forEach var="dto" items="${list}">
 										<tr>
 											<td>${dto.bno}</td>
-											<td><a href="${dto.bno}" class="move">${dto.title}</a></td>
+											<td><a href="${dto.bno}" class="move">${dto.title}</a> <strong>[${dto.replycnt}]</strong> </td>
 											<td>${dto.writer}</td>
 											<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${dto.regdate}"/></td>
 											<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${dto.updatedate}"/></td>
@@ -110,7 +110,6 @@
  	<input type="hidden" name="keyword" value="${pageDto.cri.keyword}"/>
  	<input type="hidden" name="bno" value=""/>
  </form>
-            
 <!-- 모달 추가 -->
 <div class="modal" tabindex="-1" id="myModal">
   <div class="modal-dialog">

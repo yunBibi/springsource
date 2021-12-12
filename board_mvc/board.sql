@@ -84,7 +84,9 @@ create table spring_reply(
 	replyer varchar2(50) not null, -- 댓글 작성자
 	replydate date default sysdate, -- 댓글 작성일
 	updatedate date default sysdate, -- 댓글 수정일
-	constraint fk_reply_board foreign key(bno) references spring_board(bno)	-- 외래 키 설정
+	constraint fk_reply_board foreign key(bno) references spring_board(bno) -- 외래 키 설정
+	on delete cascade -- 데이터 삭제 시 데이터를 참조하고 있는 데이터도 함께 삭제
+	-- ON DELETE SET NULL데이터 삭제 시 데이터를 참조하고 있는 데이터를 NULL로 수정
 );
 
 create sequence seq_reply;
@@ -105,13 +107,38 @@ from(select /*+INDEX(spring_reply idx_reply)*/rownum rn,rno,bno,reply,replyer,re
 	 where bno=6727 and rno>0 and rownum <= 20)
 where rn > 10;
 
+-- spring_board 테이블에 댓글 수를 저장할 칼럼 추가
+alter table spring_board add(replycnt number default 0);
+
+-- 이미 들어간 댓글 수 삽입하기
+update spring_board
+set replycnt = (select count(rno) 
+                from SPRING_REPLY 
+                where SPRING_BOARD.bno=spring_reply.bno);
+ 
+select * from SPRING_BOARD where bno = 6727;
 
 
+-- 첨부파일 테이블
+create table spring_attach(
+	uuid varchar2(100) not null,
+	uploadPath varchar2(200) not null,
+	fileName varchar2(100) not null,
+	fileType char(1) default 'I',
+	bno number(10,0)
+);
 
+alter table spring_attach add constraint pk_attach primary key(uuid);
 
+alter table spring_attach add constraint fk_attach foreign key(bno)
+references spring_board(bno);
 
+select * from spring_attach;
 
+-- 데이터 삭제 시 삭제할 데이터를 참조하는 처리를 어떻게 할 것인가?
+-- spring_board bno가 삭제될 때 게시물에 달려있는 댓글은 어떻게 처리할 것인가?
 
+-- spring_board bno가 삭제될 때 첨부물은 삭제 했음
 
 
 

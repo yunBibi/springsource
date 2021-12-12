@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<link rel="stylesheet" href="/resources/css/upload.css"/>
 <%@include file="../includes/header.jsp" %>
             <div class="row">
                 <div class="col-lg-12">
@@ -42,6 +42,25 @@
                 	</div>
                 </div>
             </div>
+<!-- 첨부파일 영역 -->
+<div class="bigPictureWrapper">
+	<div class="bigPicture"></div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading"><i class="fa fa-files-o"></i>파일첨부</div>
+			<div class="panel-body">
+			<div class="form-group uploadDiv">
+					<input type="file" name="uploadFile" id="" multiple/>
+				</div>
+				<div class="uploadResult">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>        
 <%-- remove와 list를 위한 폼--%>
 <form action="" id="actionForm">
 	<input type="hidden" name="pageNum" value="${cri.pageNum}" />
@@ -51,5 +70,9 @@
 	<input type="hidden" name="bno" value="${dto.bno}" />
 </form>   			
 <%-- 스크립트 --%>
+<script>
+	//현재 글 번호 가져오기
+	let bno = ${dto.bno};
+</script>
 <script src="/resources/js/modify.js"></script>   
 <%@include file="../includes/footer.jsp" %>       

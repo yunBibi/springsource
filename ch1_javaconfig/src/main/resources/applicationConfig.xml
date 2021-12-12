@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 생성할 객체(bean) 알려주기 -->
+    <bean id="ko" class="com.company.app.MessageBeanKo"/>
+    <bean id="en" class="com.company.app.MessageBeanEn"/>
+    
+    
+    <!--  tvapp -->
+    <bean id="lg" class="com.company.tvapp.LgTv"/>
+    <bean id="samsung" class="com.company.tvapp.SamsungTv"/>
+    <bean id="sony" class="com.company.tvapp.SonySpeaker"/>
+    <bean id="apple" class="com.company.tvapp.AppleSpeaker"/>
+</beans>
+
+
+
+
+
+
+
+
+

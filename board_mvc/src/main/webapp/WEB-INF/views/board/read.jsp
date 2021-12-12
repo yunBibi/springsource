@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" href="/resources/css/upload.css"/>
 <%@include file="../includes/header.jsp" %>
             <div class="row">
                 <div class="col-lg-12">
@@ -40,7 +41,23 @@
                 	</div>
                 </div>
             </div> 
-            
+      
+<!-- 첨부파일 영역 -->
+<div class="bigPictureWrapper">
+	<div class="bigPicture"></div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading"><i class="fa fa-files-o"></i>파일첨부</div>
+			<div class="panel-body">
+				<div class="uploadResult">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>           
 <%-- 댓글 리스트 --%>
 <div class="row">
 	<div class="col-lg-12">
@@ -70,7 +87,6 @@
 		</div><!-- panel-default close -->
 	</div><!-- col-lg-12 close -->
 </div><!-- row close -->  
-
 <%-- 댓글 작성 폼 --%>
 <div class="modal" tabindex="-1" id="replyModal">
   <div class="modal-dialog">

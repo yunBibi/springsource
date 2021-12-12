@@ -20,6 +20,11 @@
 		where rno=#{rno}
 	</update>	
 	
+	<!-- 댓글 삭제 : bno 일치-->
+	<delete id="deleteAll">
+		delete from spring_reply where bno=#{bno}
+	</delete>
+	
 	<!-- 댓글 삭제 : rno 일치-->
 	<delete id="delete">
 		delete from spring_reply where rno=#{rno}
