@@ -31,7 +31,7 @@
 		<security:authentication-provider>
 			<security:user-service>
 				<security:user name="user1" password="{noop}user1" authorities="ROLE_USER"/>
-				<security:user name="admin" password="{noop}admin" authorities="ROLE_ADMIN"/>
+				<security:user name="admin" password="{noop}admin" authorities="ROLE_ADMIN,ROLE_USER"/>
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
