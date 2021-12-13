@@ -14,7 +14,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @MapperScan("com.company.mapper")
 public class BoardConfig {
 	
-	@Bean
+	@Bean // 인스턴스를 생성하고 스프링 컨테이너가 관리
 	public DataSource dataSource() {
 		HikariConfig hikafiConfig = new HikariConfig();
 		hikafiConfig.setDriverClassName("");
