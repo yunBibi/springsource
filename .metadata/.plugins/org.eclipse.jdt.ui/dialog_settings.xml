@@ -26,8 +26,8 @@
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;"/>
 	</section>
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="142"/>
-		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_X_ORIGIN" value="95"/>
+		<item key="DIALOG_Y_ORIGIN" value="40"/>
 		<item key="DIALOG_WIDTH" value="310"/>
 		<item key="DIALOG_HEIGHT" value="497"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
@@ -53,11 +53,11 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="576"/>
-		<item key="DIALOG_Y_ORIGIN" value="11"/>
-		<item key="DIALOG_WIDTH" value="805"/>
-		<item key="DIALOG_HEIGHT" value="1067"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_X_ORIGIN" value="299"/>
+		<item key="DIALOG_Y_ORIGIN" value="41"/>
+		<item key="DIALOG_WIDTH" value="517"/>
+		<item key="DIALOG_HEIGHT" value="650"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item key="VisibilityModifier" value="1"/>
